@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <title>Data Collector</title>
+  <head>
+    <link href="../static/main.css" rel="stylesheet">
+  </head>
+    <body>
+      <div class="container">
+        <h1>Height Collector</h1>
+        <h3>Fill your entries to get the population height statistics</h3>
+        <div class="message">
+          {{text | safe}}
+        </div>
+        <form action="{{url_for('success')}}" method="POST">
+          <input title="Your email is safe with us" placeholder="Enter your email address" type="email" name="email_name" required><br>
+          <input title="Your Height Please in centimetres" placeholder="Enter your height" type="number" min="50",max="300" name="height_name"><br>
+          <button type="submit">SUBMIT</button>
+        </form>
+      </div>
+
+    </body>
+</html>
